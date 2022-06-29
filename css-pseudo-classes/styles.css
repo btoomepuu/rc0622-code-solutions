@@ -1,0 +1,20 @@
+button {
+  height: 100px;
+  width: 150px;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.header:nth-child(n) {
+  background-color: black;
+  color: white;
+}
+
+.table-data tr:nth-child(odd) {
+  background-color: lightgrey;
+}
