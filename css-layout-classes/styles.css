@@ -20,9 +20,9 @@
   flex-basis: calc(100% / 3);
 }
 
-img {
+/* img {
   width: 100%;
-}
+} */
 
 .column-one-fourth {
   flex-basis: calc(100% / 4);
