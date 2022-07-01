@@ -14,8 +14,9 @@
 
 .emoji {
   font-size: 3rem;
-  right: 5px;
   position: absolute;
+  right: 5px;
+  top: 5px;
 
   /* your code here */
 }
