@@ -14,9 +14,12 @@ console.log('value of property liveInIrvine:', student.livesInIrvine);
 console.log('value of property previousOccupation:', student.previousOccupation);
 
 var vechicle = {
-  color: 'red'
+  make: 'toyota',
+  model: 'corolla',
+  year: 2016
 };
 
+vechicle.color = 'red';
 vechicle['isConvertible'] = false;
 console.log('the object vehicle:', vechicle);
 console.log('value of property color:', vechicle['color']);
