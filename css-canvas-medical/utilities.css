@@ -1,0 +1,105 @@
+.logo > img {
+  margin-left: 30px;
+  padding: 20px;
+  width: 165px;
+}
+
+ul {
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+}
+
+.btn-lrg {
+  color: white;
+  background: rgb(43 55 92);
+  border-radius: 3px;
+  text-align: center;
+  width: 150px;
+  height: 45px;
+  border: 1px;
+}
+
+.btn-med {
+  color: white;
+  background: rgb(43 55 92);
+  border-radius: 1px;
+  text-align: center;
+}
+
+.btn-small {
+  color: white;
+  background: rgb(43 55 92);
+  border-radius: 3px;
+  text-align: center;
+  width: 80px;
+  height: 35px;
+  font-size: 12px;
+  border: 1px;
+  align-self: flex-end;
+}
+
+hr {
+  padding: 0 30px;
+  height: 2px;
+  background-color: lightgray;
+  opacity: 0.1;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.learn-more p {
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  background-color: rgb(64  65  64);
+  color: white;
+}
+
+.left-footer {
+  width: calc(100% / 4);
+  margin-bottom: 80px;
+}
+
+.left-footer img {
+  margin-top: 80px;
+}
+
+.left-footer ul {
+  margin-left: 30px;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer-space {
+  width: calc(100% / 4);
+}
+
+.company-footer {
+  width: calc(100% / 4);
+  font-size: 14px;
+  padding-top: 100px;
+  line-height: 2;
+}
+
+.product-footer {
+  width: calc(100% / 4);
+  padding-top: 100px;
+  line-height: 2;
+}
+
+.privacy {
+  display: flex;
+  background-color: rgb(249 249 249);
+}
+
+.privacy p {
+  margin: 30px 0 50px 50px;
+  font-size: 14px;
+}
