@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: rgb(91 91 91);
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: "Tiempos Headline", Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+  font-family: Avenir, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: #a0a0a0;
+  padding: 5px;
+}
+
+.navbar ul {
+  display: flex;
+  margin-right: 35px;
+  font-size: 12px;
+  line-height: 40px;
+}
+
+.navbar ul li {
+  margin: 15px;
+}
+
+.content-home {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-content: center;
+  margin: 50px 50px 80px;
+  padding: 50px;
+  background-image:
+    linear-gradient(
+      rgb(63 62 62 / 50%),
+      rgb(63 62 62 / 50%)
+    ),
+    url("images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* filter: contrast(60%); */
+}
+
+.content-home h1 {
+  width: calc(100% / 2);
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #fefefa;
+}
+
+.content-home p {
+  width: calc(100% / 2);
+  margin-left: 20px;
+  color: #fefefa;
+}
+
+.content-home button {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.home-mid {
+  display: flex;
+  text-align: center;
+  background-color: rgb(249 249 249);
+}
+
+.mid-content {
+  text-align: center;
+  width: 100%;
+}
+
+.mid-content h2 {
+  margin-top: 80px;
+}
+
+.mid-content p {
+  margin-bottom: 30px;
+  padding: 0 50px;
+  font-size: 14px;
+}
+
+.doc-list {
+  display: flex;
+}
+
+.doc-list ul {
+  width: calc(100% / 2);
+  margin-bottom: 80px;
+}
+
+.doc-list ul li {
+  line-height: 3;
+}
