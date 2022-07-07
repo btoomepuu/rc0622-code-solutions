@@ -51,7 +51,7 @@ function categorizeAcidity(ph) {
     return 'neutral';
   } else if (ph <= 14) {
     return 'base';
-  } else { return 'invalid pH'; }
+  } else { return 'invalid pH level'; }
 }
 
 function introduceWarnerBro(name) {
