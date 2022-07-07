@@ -1,0 +1,49 @@
+* {
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.new-arrivals-container {
+  max-width: 1800px;
+  margin: 20px 200px;
+  line-height: 2;
+}
+
+.new-arrivals-container h1 {
+  text-align: center;
+}
+
+.new-arrivals {
+  display: flex;
+}
+
+.fifth-column {
+  width: calc((100% / 5));
+  display: flex;
+  flex-direction: column;
+}
+
+.item-image {
+  margin: 10px;
+  aspect-ratio: 2 / 3;
+}
+
+.vl {
+  border-left: 0.5mm solid lightgrey;
+  margin: 0 5px;
+}
+
+.item-size,
+.item-retail {
+  color: silver;
+}
+
+.item-price {
+  background-color: #ffdab9;
+}
+
+.item-retail {
+  text-decoration: line-through;
+}
