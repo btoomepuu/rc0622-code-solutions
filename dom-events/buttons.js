@@ -4,7 +4,7 @@ function handleClick(event) {
   console.log('target prop of event object: ', event.target);
 }
 
-const $clickButton = document.getElementsByClassName('click-button')[0];
+const $clickButton = document.querySelector('.click-button');
 $clickButton.addEventListener('click', handleClick);
 
 function handleMouseover(event) {
@@ -13,7 +13,7 @@ function handleMouseover(event) {
   console.log('target prop of event object: ', event.target);
 }
 
-const $mouseover = document.getElementsByClassName('hover-button')[0];
+const $mouseover = document.querySelector('.hover-button');
 $mouseover.addEventListener('mouseover', handleMouseover);
 
 function handleDoubleClick(event) {
@@ -22,5 +22,5 @@ function handleDoubleClick(event) {
   console.log('target prop of event object: ', event.target);
 }
 
-const $dblClick = document.getElementsByClassName('double-click-button')[0];
+const $dblClick = document.querySelector('.double-click-button');
 $dblClick.addEventListener('dblclick', handleDoubleClick);
