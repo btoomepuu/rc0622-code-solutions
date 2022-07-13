@@ -7,6 +7,7 @@ function handleSubmit(event) {
     formValues[item.name] = item.value;
   }
   console.log('formValues:', formValues);
+  document.getElementById('contact-form').reset();
 }
 
 var $contactForm = document.querySelector('#contact-form');
