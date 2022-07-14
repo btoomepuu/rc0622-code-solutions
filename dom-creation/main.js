@@ -8,26 +8,19 @@ function renderPokemon(object) {
   var cardTextDiv = document.createElement('div');
   cardTextDiv.setAttribute('class', 'pokemon-card-text');
   pokeCard.appendChild(cardTextDiv);
-  for (const key in object) {
-    if (key === 'imageUrl') {
-      var image = document.createElement('img');
-      image.setAttribute('src', `${object[key]}`);
-      pokeCard.insertBefore(image, cardTextDiv);
-    } else if (key === 'description') {
-      var description = document.createElement('p');
-      description.textContent = `${object[key]}`;
-      cardTextDiv.appendChild(description);
-    } else if (key === 'number') {
-      var number = document.createElement('h3');
-      number.textContent = `${object[key]}`;
-      cardTextDiv.insertBefore(number, cardTextDiv.lastChild);
-    } else if (key === 'name') {
-      var name = document.createElement('h2');
-      name.textContent = `${object[key]}`;
-      cardTextDiv.insertBefore(name, cardTextDiv.firstChild);
-    }
-  }
-  row.append(columnDiv);
+  var image = document.createElement('img');
+  image.setAttribute('src', `${object.imageUrl}`);
+  pokeCard.insertBefore(image, cardTextDiv);
+  var description = document.createElement('p');
+  description.textContent = `${object.description}`;
+  cardTextDiv.appendChild(description);
+  var number = document.createElement('h3');
+  number.textContent = `${object.number}`;
+  cardTextDiv.insertBefore(number, cardTextDiv.lastChild);
+  var name = document.createElement('h2');
+  name.textContent = `${object.name}`;
+  cardTextDiv.insertBefore(name, cardTextDiv.firstChild);
+  return columnDiv;
 }
 
 var pokedex = [
@@ -85,7 +78,30 @@ var pokedex = [
     description: 'It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.',
     imageUrl: 'images/blastoise.png'
   }
+
 ];
 
 var row = document.querySelector('.row');
-pokedex.forEach(card => renderPokemon(card));
+
+// row.append(pokedex.forEach(card => renderPokemon(card)));
+pokedex.forEach(card => row.append(renderPokemon(card)));
+
+// for (const key in object) {
+//   if (key === 'imageUrl') {
+//     var image = document.createElement('img');
+//     image.setAttribute('src', `${object[key]}`);
+//     pokeCard.insertBefore(image, cardTextDiv);
+//   } else if (key === 'description') {
+//     var description = document.createElement('p');
+//     description.textContent = `${object[key]}`;
+//     cardTextDiv.appendChild(description);
+//   } else if (key === 'number') {
+//     var number = document.createElement('h3');
+//     number.textContent = `${object[key]}`;
+//     cardTextDiv.insertBefore(number, cardTextDiv.lastChild);
+//   } else if (key === 'name') {
+//     var name = document.createElement('h2');
+//     name.textContent = `${object[key]}`;
+//     cardTextDiv.insertBefore(name, cardTextDiv.firstChild);
+//   }
+// }
