@@ -1,6 +1,7 @@
 function handleSubmit(event) {
   event.preventDefault();
   var elements = document.getElementById('contact-form').elements;
+  console.log(elements.length);
   var formValues = {};
   for (var i = 0; i < elements.length; i++) {
     var item = elements.item(i);
