@@ -1,8 +1,8 @@
 var i = 0;
 var count = [3, 2, 1, '~Earth Beeeelooowww Us~'];
-
+var countDisplay = document.querySelector('.countdown-display');
 var intervalID = setInterval(() => {
-  document.querySelector('.countdown-display').innerHTML = count[i];
+  countDisplay.textContent = count[i];
   i++;
   if (i > count.length - 1) {
     clearInterval(intervalID);
