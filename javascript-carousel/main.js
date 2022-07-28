@@ -3,10 +3,12 @@ const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 const slides = document.querySelectorAll('.slide');
 const slideIcons = document.querySelectorAll('.slide-icon');
+const navIcons = document.querySelector('.navigation-visibility');
+const iconSelectList = Array.from(navIcons.children);
 const numberOfSlides = slides.length;
 var slideNumber = 0;
 
-// image slider next button
+// image slider next buttons
 nextBtn.addEventListener('click', () => {
   slides.forEach(slide => {
     slide.classList.remove('active');
@@ -45,6 +47,22 @@ prevBtn.addEventListener('click', () => {
   slideIcons[slideNumber].classList.add('active');
   slides[slideNumber].classList.add('active');
 
+});
+
+// image choice by icon click
+navIcons.addEventListener('click', e => {
+  const iconTarget = e.target.closest('div');
+  var iconIndex = iconSelectList.indexOf(iconTarget);
+  slideNumber = iconIndex;
+  slides.forEach(slide => {
+    slide.classList.remove('active');
+  });
+
+  slideIcons.forEach(slideIcon => {
+    slideIcon.classList.remove('active');
+  });
+  slideIcons[slideNumber].classList.add('active');
+  slides[slideNumber].classList.add('active');
 });
 
 // image slider auto play
