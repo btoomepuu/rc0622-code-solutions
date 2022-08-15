@@ -49,13 +49,7 @@ const library = [
   }
 ];
 
-function getBook(index) {
-  return library[index];
-}
-
-const book3 = getBook(0);
-const book4 = getBook(1);
-const book5 = getBook(2);
+const [book3, book4, book5] = library;
 
 console.log('book3:', book3);
 console.log('book4:', book4);
