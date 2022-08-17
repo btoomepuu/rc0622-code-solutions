@@ -1,11 +1,18 @@
+const func = process.argv[3];
 const num1 = Number(process.argv[2]);
 const num2 = Number(process.argv[4]);
-const func = process.argv[3];
-const operation = require(`./${func}`);
+let operation;
 
-const calculate = (x, func, y) => {
-  const result = operation(x, y);
+const calculate = (x, op, y) => {
+  const result = op(x, y);
   console.log('result:', result);
 };
 
-calculate(num1, operation, num2);
+switch (func) {
+  case 'add': case 'subtract': case 'multiply': case 'divide':
+    operation = require(`./${func}`);
+    calculate(num1, operation, num2);
+    break;
+  default:
+    console.log('invalid operation');
+}
