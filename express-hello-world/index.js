@@ -3,7 +3,6 @@ const app = express();
 
 app.use(function (req, res, next) {
   res.send('To infinity and beyond!');
-  next();
 });
 
 app.listen(3000, () => {
