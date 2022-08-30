@@ -40,7 +40,22 @@ app.get('/api/grades/:gradeId', (req, res) => {
       }
 
       res.json(grade);
-      res.json('testing GET api/grade/:gradeId');
+    });
+});
+
+app.get('/api/grades', (req, res) => {
+  const gradeArray = [];
+  const sql = `
+  select *
+  from "grades"
+  `;
+  db.query(sql)
+    .then(result => {
+      result.rows.forEach(row => {
+        gradeArray.push(row);
+
+      });
+      res.json(gradeArray);
     });
 });
 
