@@ -28,35 +28,29 @@
 
 class Stopwatch {
   constructor(seconds) {
-    this.secondsPerHour = 3600;
-    this.secondsPerMinute = 60;
-    this.seconds = seconds;
-    this.hours = Math.floor(seconds / this.secondsPerHour);
-    this.minutes = Math.floor(seconds / this.secondsPerMinute);
-  }
+    this.elaspsedSeconds = seconds;
 
-  elaspsedSeconds() {
-    return this.seconds;
   }
 
   getTime() {
-    return this.hours;
+    const secondsPerHour = 3600;
+    const secondsPerMinute = 60;
+    let seconds = this.elaspsedSeconds;
+    let hours = Math.floor(seconds / secondsPerHour);
+    seconds -= (secondsPerHour * hours);
+    let minutes = Math.floor(seconds / secondsPerMinute);
+    seconds -= (secondsPerMinute * minutes);
+    hours = hours.toString().padStart(2, '0');
+    minutes = minutes.toString().padStart(2, '0');
+    seconds = seconds.toString().padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
   }
 
   tick() {
-    this.seconds++;
+    this.elaspsedSeconds++;
   }
 
   reset() {
-    this.seconds = 0;
+    this.elaspsedSeconds = 0;
   }
 }
-
-// const watch = new Stopwatch(345);
-// console.log('new watch:', watch);
-// console.log('elaspsed seconds:', watch.elaspsedSeconds());
-// console.log('getTime:', watch.getTime());
-// watch.tick();
-// console.log('elaspsed seconds:', watch.elaspsedSeconds());
-// watch.reset();
-// console.log('elaspsed seconds:', watch.elaspsedSeconds());
