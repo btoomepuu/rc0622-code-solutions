@@ -1,3 +1,4 @@
+const nextId = 9;
 const express = require('express');
 const pg = require('pg');
 
@@ -8,7 +9,10 @@ const db = new pg.Pool({
   ssl: {
     rejectUnauthorized: false
   }
+
 });
+
+app.use(express.json());
 
 app.get('/api/grades/:gradeId', (req, res) => {
   const gradeId = Number(req.params.gradeId);
@@ -57,6 +61,20 @@ app.get('/api/grades', (req, res) => {
       });
       res.json(gradeArray);
     });
+});
+
+app.post('/api/grades', (req, res) => {
+  req.body.gradeId = nextId;
+  const sql = `
+  INSERT INTO grades(gradeId, name, course, score)
+        VALUES(req.body.gradeId, req.body.name, req.body.course, req.body.score)
+  `;
+
+  db.query(sql)
+    .then(result => {
+    });
+  // nextId++;
+  res.status(201).send(req.body);
 });
 
 app.listen(3000, () => {
