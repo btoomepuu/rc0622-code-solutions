@@ -1,0 +1,38 @@
+.btn {
+  box-sizing: border-box;
+  background-color: rgb(0 0 205);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: large;
+  padding: 10px 16px;
+}
+
+.drk-prpl {
+  background-color: rgb(75 0 130);
+}
+
+.lt-prpl {
+  background-color: rgb(147 112 219);
+}
+
+.pink {
+  background-color: rgb(255 188 217);
+}
+
+.orange {
+  color: black;
+  background-color: rgb(255 203 164);
+}
+
+.yellow {
+  color: black;
+  background-color: rgb(255 225 53);
+}
+
+.white {
+  color: black;
+  background-color: aliceblue;
+}
