@@ -10,16 +10,19 @@ class CustomButton extends React.Component {
 
   handleClick() {
     this.setState({ isClicked: true });
-    this.props.text = 'Thank you!';
   }
 
   render() {
-    return <button onClick={this.handleClick}>{this.props.text}</button>;
+    if (this.state.isClicked) {
+      return <button>Thank You!</button>;
+    } else {
+      return <button onClick={this.handleClick}>Click Me!</button>;
+    }
   }
 }
 
 const container = document.querySelector('#root');
 const root = ReactDOM.createRoot(container);
 
-const element = <CustomButton text="Click Me!" />;
+const element = <CustomButton />;
 root.render(element);
