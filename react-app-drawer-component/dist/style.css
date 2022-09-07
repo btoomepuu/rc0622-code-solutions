@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 900px;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  margin: 1rem 0 0 1rem;
+}
+
+.drawer-container {
+  margin: 1rem 0 0 1rem;
+  width: 17.188rem;
+}
+
+.drawer-container h2 {
+  margin-bottom: 0.75rem;
+}
+
+.drawer-container li {
+  font-size: 1.2rem;
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+.drawer-container li:hover {
+  background-color: lightgrey;
+}
+
+/* .modal  {
+
+} */
