@@ -4,7 +4,7 @@ const path = require('path');
 var join = path.join(__dirname, 'public');
 console.log(join);
 
-app.use(express.static('public'));
+app.use(express.static(join));
 
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
