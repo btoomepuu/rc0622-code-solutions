@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.stopwatch {
+  height: 15rem;
+  width: 15rem;
+  border: 0.15rem solid rgb(53 56 57);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.counter {
+  font-size: 5rem;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
